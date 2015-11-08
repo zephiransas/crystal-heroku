@@ -1,1 +1,1 @@
-web: crystal run server.cr
+web: ./app -p $PORT
