@@ -8,7 +8,7 @@ OptionParser.parse! do |opts|
   end
 end
 
-server = HTTP::Server.new(server_port) do |request|
+server = HTTP::Server.new("0.0.0.0", server_port) do |request|
   HTTP::Response.ok "text/plain", "Hello world, got #{request.path}!"
 end
 
